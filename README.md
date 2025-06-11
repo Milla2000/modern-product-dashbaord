@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Product Dashboard (Next.js + React Query)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Setup Instructions
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Install dependencies:**
+   ```powershell
+   npm install
+   ```
+2. **Run the development server:**
+   ```powershell
+   npm run dev
+   ```
+3. **Open** [http://localhost:3000/products](http://localhost:3000/products) **to view the product dashboard.**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
+- Product listing with responsive grid 
+- Search and filter by category (client-side)
+- Product details page with dynamic routing
+- API fetching and caching via React Query
+- Loading and error states
+- Dark mode toggle (optional, see Layout)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Architecture Notes
+- API logic is in `src/lib/api.ts`
+- React Query is set up in `src/components/ReactQueryProvider.tsx` and injected in root layout
+- Product UI components are in `src/components/`
+- Pages use Next.js App Router (`/products` and `/products/[id]`)
 
-## Learn More
+## Customization
+- To add dark mode, see `Layout.tsx` and add a toggle using Tailwind's dark mode classes.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**For questions, see code comments or contact the maintainer.**
+#
